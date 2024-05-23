@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Vishnu Priya",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 221.4, "left": 18.6, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad",
+      "top": 26.8,
+      "left": 360.8,
+      "attrs": {
+        "keys": [ "1", "2", "3", "+", "4", "5", "6", "-", "7", "8", "9", "*", ".", "0", "=", "/" ]
+      }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": 8, "left": 20, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.1", "lcd:VSS", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "uno:GND.1", "lcd:K", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "uno:GND.1", "lcd:RW", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "uno:12", "lcd:RS", "blue", [ "v-16", "*", "h0", "v20" ] ],
+    [ "uno:11", "lcd:E", "purple", [ "v-20", "*", "h0", "v20" ] ],
+    [ "uno:10", "lcd:D4", "green", [ "v-24", "*", "h0", "v20" ] ],
+    [ "uno:9", "lcd:D5", "brown", [ "v-28", "*", "h0", "v20" ] ],
+    [ "uno:8", "lcd:D6", "gold", [ "v-32", "*", "h0", "v20" ] ],
+    [ "uno:7", "lcd:D7", "gray", [ "v-36", "*", "h0", "v20" ] ],
+    [ "uno:A3", "keypad:C1", "brown", [ "v19.1", "h244.2" ] ],
+    [ "uno:A2", "keypad:C2", "gray", [ "v28.7", "h263.2" ] ],
+    [ "uno:A1", "keypad:C3", "orange", [ "v38.3", "h282.45" ] ],
+    [ "uno:A0", "keypad:C4", "pink", [ "v47.9", "h301.7" ] ],
+    [ "uno:5", "keypad:R1", "blue", [ "v-34", "h96", "*", "v12" ] ],
+    [ "uno:4", "keypad:R2", "green", [ "v-30", "h80", "*", "v16" ] ],
+    [ "uno:3", "keypad:R3", "purple", [ "v-26", "h64", "*", "v20" ] ],
+    [ "uno:2", "keypad:R4", "gold", [ "v-22", "h48", "*", "v24" ] ],
+    [ "lcd:A", "lcd:VDD", "red", [ "v24.23", "h-119.3" ] ],
+    [ "lcd:VDD", "uno:5V", "red", [ "v62.63", "h-51.9", "v249.6", "h163.2", "v-38.3" ] ]
+  ],
+  "dependencies": {}
+}
