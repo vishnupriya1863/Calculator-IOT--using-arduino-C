@@ -1,13 +1,3 @@
-/*
-  File: my_code.ino
-  Author: Technical Shubham
-  Date: April 8, 2024
-  Description: This sketch implements a basic calculator using Arduino, a LCD display, and a keypad.
-*/
-
-// Code developed by Technical Shubham
-// All rights reserved
-
 #include <LiquidCrystal.h>
 #include <Keypad.h>
 #include <Servo.h>
